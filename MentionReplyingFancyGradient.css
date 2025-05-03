@@ -1,0 +1,97 @@
+/*FANCY MENTION/REPLY GRADIENT COLORS*/
+/*By: Burning Stone*/
+.mentioned__5126c {
+    position: relative; /* Needed for z-index layering to work properly */
+    background: none !important; /* removes Discord's default background */
+    box-shadow: none !important; /* removes glow effect if any */
+    border: none !important;
+    border-radius: 4px;
+}
+
+.mentioned__5126c::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #ba6d14, #393a41);
+    z-index: -1;
+    opacity: .2;
+    border-radius: 4px;
+}
+
+.replying__5126c {
+    position: relative; /* Needed for z-index layering to work properly */
+    background: none !important; /* removes Discord's default background */
+    box-shadow: none !important; /* removes glow effect if any */
+    border: none !important;
+    border-radius: 4px;
+}
+
+.replying__5126c::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #3a48a3, #393a41);
+    z-index: -1;
+    opacity: .3;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.backgroundFlash__5126c {
+    background: none !important;
+    box-shadow: none !important;
+    position: relative;
+}
+
+
+.backgroundFlash__5126c[data-flash="true"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #3a48a3, #393a41);
+    opacity: 0;
+    border-radius: 4px;
+    z-index: -1;
+    pointer-events: none;
+    animation: fadeInHighlight .15s ease-out forwards;
+}
+
+
+.backgroundFlash__5126c[data-flash="false"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #3a48a3, #393a41);
+    opacity: 0.3;
+    border-radius: 4px;
+    z-index: -1;
+    pointer-events: none;
+    animation: fadeOutHighlight .15s ease-out forwards;
+}
+
+
+@keyframes fadeInHighlight {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+
+@keyframes fadeOutHighlight {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0;
+    }
+}
