@@ -44,14 +44,12 @@
     pointer-events: none;
 }
 
-.backgroundFlash__5126c {
-    background: none !important;
-    box-shadow: none !important;
+.backgroundFlash__5126c .cozy_c19a55.wrapper_c19a55 {
     position: relative;
+    z-index: 0;
 }
 
-
-.backgroundFlash__5126c[data-flash="true"]::after {
+.backgroundFlash__5126c[data-flash="true"] .cozy_c19a55.wrapper_c19a55::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -60,11 +58,11 @@
     border-radius: 4px;
     z-index: -1;
     pointer-events: none;
-    animation: fadeInHighlight .15s ease-out forwards;
+    animation: fadeInHighlight 0.15s ease-out forwards;
+    will-change: opacity;
 }
 
-
-.backgroundFlash__5126c[data-flash="false"]::after {
+.backgroundFlash__5126c[data-flash="false"] .cozy_c19a55.wrapper_c19a55::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -73,25 +71,16 @@
     border-radius: 4px;
     z-index: -1;
     pointer-events: none;
-    animation: fadeOutHighlight .15s ease-out forwards;
+    animation: fadeOutHighlight 0.15s ease-out forwards;
+    will-change: opacity;
 }
-
 
 @keyframes fadeInHighlight {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.3;
-    }
+    from { opacity: 0; }
+    to   { opacity: 0.3; }
 }
 
-
 @keyframes fadeOutHighlight {
-    from {
-        opacity: 0.3;
-    }
-    to {
-        opacity: 0;
-    }
+    from { opacity: 0.3; }
+    to   { opacity: 0; }
 }
