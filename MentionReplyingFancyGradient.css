@@ -46,7 +46,6 @@
 
 .backgroundFlash__5126c .cozy_c19a55.wrapper_c19a55 {
     position: relative;
-    z-index: 0;
 }
 
 .backgroundFlash__5126c[data-flash="true"] .cozy_c19a55.wrapper_c19a55::after {
