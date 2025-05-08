@@ -45,44 +45,13 @@
 }
 
 .flash__03436 {
-    background: none !important;
-    box-shadow: none !important;
-    position: relative;
+    background-image: transparent
 }
 
-
-.flash__03436[data-flash="true"]::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to right, #3a48a3, var(--background-base-lower));
-    opacity: 0;
-    border-radius: 4px;
-    z-index: -1;
-    pointer-events: none;
-    animation: fadeInHighlight 0.15s ease-out forwards;
-    will-change: opacity;
+.flash__03436[data-flash=true] {
+    background-image: linear-gradient(to right, rgba(79, 91, 172, 0.3), var(--background-base-lower));
 }
 
-.flash__03436[data-flash="false"]::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to right, #3a48a3, var(--background-base-lower));
-    opacity: 0.3;
-    border-radius: 4px;
-    z-index: -1;
-    pointer-events: none;
-    animation: fadeOutHighlight 0.15s ease-out forwards;
-    will-change: opacity;
-}
-
-@keyframes fadeInHighlight {
-    from { opacity: 0; }
-    to   { opacity: 0.3; }
-}
-
-@keyframes fadeOutHighlight {
-    from { opacity: 0.3; }
-    to   { opacity: 0; }
+.full-motion .flash__03436 {
+    transition: background-color .2s ease
 }
