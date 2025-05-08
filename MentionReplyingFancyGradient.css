@@ -44,11 +44,14 @@
     pointer-events: none;
 }
 
-.backgroundFlash__5126c .cozy_c19a55.wrapper_c19a55 {
+.flash__03436 {
+    background: none !important;
+    box-shadow: none !important;
     position: relative;
 }
 
-.backgroundFlash__5126c[data-flash="true"] .cozy_c19a55.wrapper_c19a55::after {
+
+.flash__03436[data-flash="true"]::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -61,7 +64,7 @@
     will-change: opacity;
 }
 
-.backgroundFlash__5126c[data-flash="false"] .cozy_c19a55.wrapper_c19a55::after {
+.flash__03436[data-flash="false"]::after {
     content: "";
     position: absolute;
     inset: 0;
