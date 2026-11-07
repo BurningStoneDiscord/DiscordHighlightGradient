@@ -54,6 +54,7 @@
 
 .flashOverlay_EajVQV {
   background-color: transparent;
+  background-image: linear-gradient(to right, rgba(58, 72, 163, 0.3), transparent);
   border-inline-start:2px solid var(--text-brand);
   border-radius:inherit;
   inset:0;
